@@ -1,0 +1,2115 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Oreg "http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/" >
+]>
+
+
+<rdf:RDF xmlns="http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg#"
+     xml:base="http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg"
+     xmlns:Oreg="http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg">
+        <rdfs:comment xml:lang="en">The ontology for regulations and guidance</rdfs:comment>
+        <owl:imports rdf:resource="http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/TAMO/OBI_import.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000019 -->
+
+    <owl:AnnotationProperty rdf:about="&Oreg;OREG_0000019">
+        <rdfs:label xml:lang="en">CFR definition</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000115"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000154 -->
+
+    <owl:AnnotationProperty rdf:about="&Oreg;OREG_0000154">
+        <rdfs:label xml:lang="en">CFR paragraph text</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000006 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000006">
+        <rdfs:label xml:lang="en">has_legal_definition_resource</rdfs:label>
+        <rdfs:domain rdf:resource="&Oreg;OREG_0000002"/>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000007"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000008 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000008">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">document_part_of</rdfs:label>
+        <owl:inverseOf rdf:resource="&Oreg;OREG_0000035"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Oreg;OREG_0000043"/>
+            <rdf:Description rdf:about="&Oreg;OREG_0000043"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000035 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000035">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has_document_part</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000036 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000036">
+        <rdfs:label xml:lang="en">has_CFR_title_part</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000035"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000037 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000037">
+        <rdfs:label xml:lang="en">has_CFR_part</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000035"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000038 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000038">
+        <rdfs:label xml:lang="en">has_CFR_subpart</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000035"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000039 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000039">
+        <rdfs:label xml:lang="en">has_CFR_section</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000035"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000040 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000040">
+        <rdfs:label xml:lang="en">has_CFR_subsection_level1</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000035"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000043 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000043">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">is_direct_subsection_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000008"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000109 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000109">
+        <rdfs:label xml:lang="en">has_subject</rdfs:label>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000153"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000112 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000112">
+        <rdfs:label xml:lang="en">has_section_component</rdfs:label>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000021"/>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000119"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000114 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000114">
+        <rdfs:label xml:lang="en">has_paragraph_member</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000035"/>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:domain rdf:resource="&Oreg;OREG_0000162"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000118 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000118">
+        <rdfs:label xml:lang="en">has_subchapter_component</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000119"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000119 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000119">
+        <rdfs:label xml:lang="en">has_member</rdfs:label>
+        <rdfs:comment xml:lang="en">maybe the same as RO_0002351 has member</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000129 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000129">
+        <rdfs:label xml:lang="en">has_heading</rdfs:label>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000126"/>
+        <rdfs:subPropertyOf rdf:resource="&Oreg;OREG_0000153"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000153 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000153">
+        <rdfs:label xml:lang="en">has_wording</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000163 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000163">
+        <rdfs:label xml:lang="en">paragraph_member_of</rdfs:label>
+        <rdfs:comment>maybe the subclassof RO_0002350 member of</rdfs:comment>
+        <rdfs:domain rdf:resource="&Oreg;OREG_0000047"/>
+        <owl:inverseOf rdf:resource="&Oreg;OREG_0000114"/>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000162"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000164 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000164">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">starts_with_paragraph</rdfs:label>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:domain rdf:resource="&Oreg;OREG_0000162"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000165 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000165">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">ends_with_paragraph</rdfs:label>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:domain rdf:resource="&Oreg;OREG_0000162"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000166 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000166">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">is_adjacent_pragragh_after</rdfs:label>
+        <rdfs:domain rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000047"/>
+        <owl:inverseOf rdf:resource="&Oreg;OREG_0000167"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000167 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000167">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">is_adjacent_paragraph_before</rdfs:label>
+        <rdfs:domain rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:range rdf:resource="&Oreg;OREG_0000047"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000170 -->
+
+    <owl:ObjectProperty rdf:about="&Oreg;OREG_0000170">
+        <rdfs:label xml:lang="en">has_publication_date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000045 -->
+
+    <owl:DatatypeProperty rdf:about="&Oreg;OREG_0000045">
+        <rdfs:label xml:lang="en">has_edition_year</rdfs:label>
+        <rdfs:comment>This relation is intended to link the edition year with the CFR document. We need the edition year inheritated to the CFR part as well. It is used only for CFR instance. Only CFR instance has the edition year information.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000151 -->
+
+    <owl:DatatypeProperty rdf:about="&Oreg;OREG_0000151">
+        <rdfs:label xml:lang="en">has_revise_date</rdfs:label>
+        <obo:IAO_0000115>The date that the CFR was revised.</obo:IAO_0000115>
+        <rdfs:comment>Instance level information.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000168 -->
+
+    <owl:DatatypeProperty rdf:about="&Oreg;OREG_0000168">
+        <rdfs:label xml:lang="en">has_member_total</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000001 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000001">
+        <rdfs:label xml:lang="en">document</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000002 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000002">
+        <rdfs:label xml:lang="en">concept</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000003 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000003">
+        <rdfs:label xml:lang="en">CDISC document</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000004 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000004">
+        <rdfs:label xml:lang="en">CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000001"/>
+        <obo:IAO_0000118 xml:lang="en">CFR</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">Code of Federal Registration</obo:IAO_0000118>
+        <rdfs:comment>The Code is divided into 50 titles which represent broad areas subject to Federal regulation. Each title is divided into chapters which usually bear the name of the issuing agency. Each chapter is further subdivided into parts covering specific regulatory areas.Each volume of the Code is revised at least once each calendar year and issued on a quarterly basis approximately as follows: 
+Title 1 through Title 16 - as of January 1
+Title 17 through Title 27 - as of April 1
+Title 28 through Title 41 - as of July 1
+Title 42 through Title 50 - as of October 1</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">The Code of Federal Regulations (CFR) is the codification of the general and permanent rules and regulations (sometimes called administrative law) published in the Federal Register by the executive departments and agencies of the federal government of the United States. The CFR is divided into 50 titles that represent broad areas subject to federal regulation.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Code_of_Federal_Regulations</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000005 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000005">
+        <rdfs:label xml:lang="en">CFR defined concept</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000006"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Oreg;OREG_0000008"/>
+                                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000004"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000007 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000007">
+        <rdfs:label xml:lang="en">CFR document part</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000008"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000001"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000009 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000009">
+        <rdfs:label xml:lang="en">CFR standard organization structural unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000007"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000008"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000116 xml:lang="en">Defined in Title 1 CFR 21.11</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">The standard organization consists of the following structural units:
+
+(a) Titles, which are numbered consecutively in Arabic throughout the Code;
+
+(b) Subtitles, which are lettered consecutively in capitals throughout the title;
+
+(c) Chapters, which are numbered consecutively in Roman capitals throughout each title;
+
+(d) Subchapters, which are lettered consecutively in capitals throughout the chapter;
+
+(e) Parts, which are numbered in Arabic throughout each title;
+
+(f) Subparts, which are lettered in capitals;
+
+(g) Sections, which are numbered in Arabic throughout each part. A section number includes the number of the part followed by a period and the number of the section. For example, the section number for section 15 of part 21 is “§21.15”; and
+
+(h) Paragraphs, which are designated as follows:
+
+level 1   (a), (b), (c), etc.
+
+level 2   (1), (2), (3), etc.
+
+level 3   (i), (ii), (iii), etc.
+
+level 4   (A), (B), (C), etc.
+
+level 5   (1), (2), (3), etc.
+
+level 6   (i), (ii), (iii), etc.
+
+[54 FR 9682, Mar. 7, 1989; 54 FR 23343, May 31, 1989]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000010 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000010">
+        <rdfs:label xml:lang="en">CDISC interpretation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000011 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000011">
+        <rdfs:label xml:lang="en">wording from regulatory document</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000007"/>
+        <rdfs:comment xml:lang="en">It should be the smalled unit in the document part. For example, if I say wording from CFR document, it should be the direct subpart of the smallest unit (paragraph), such as 21 CFR 201.57(c)(9)(iv), or 21 CFR 56.115(a)(2). Different CFR section has diffrent smallest unit...</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">The original text from a regulatory document.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000012 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000012">
+        <rdfs:label xml:lang="en">value claim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000013 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000013">
+        <rdfs:label xml:lang="en">efficacy claim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000014 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000014">
+        <rdfs:label xml:lang="en">safety claim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000015 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000015">
+        <rdfs:label xml:lang="en">TPP claim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000016 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000016">
+        <rdfs:label xml:lang="en">TPC claim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000017 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000017">
+        <rdfs:label xml:lang="en">Labeling claim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000018 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000018">
+        <rdfs:label xml:lang="en">Act</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+        <obo:IAO_0000115 xml:lang="en">The Federal Food, Drug, and Cosmetic Act (secs. 201-903 (21 U.S.C. 321-393)).</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000020 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000020">
+        <rdfs:label xml:lang="en">21 CFR section</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000021"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000008"/>
+                <owl:onClass rdf:resource="&Oreg;OREG_0000023"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000021 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000021">
+        <rdfs:label xml:lang="en">CFR Section</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                        <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000042"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000119"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000047"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000109"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000078"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000022 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000022">
+        <rdfs:label xml:lang="en">Agency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+        <obo:IAO_0000115 xml:lang="en">Agency means the Food and Drug Administration.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000023 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000023">
+        <rdfs:label xml:lang="en">21 CFR Part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000041"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000024 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000024">
+        <rdfs:label xml:lang="en">21 CFR Subpart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000042"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000112"/>
+                <owl:onClass rdf:resource="&Oreg;OREG_0000021"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000025 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000025">
+        <rdfs:label xml:lang="en">CFR title</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                        <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000004"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000129"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000126"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000170"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000169"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Oreg:OREG_0000019 xml:lang="en">1 CFR 21.7 (a) The major divisions of the Code are titles, each of which brings together broadly related Government functions.</Oreg:OREG_0000019>
+        <obo:IAO_0000115 xml:lang="en">A part of CFR document that is a drect subsection (first level) of a CFR document. It is composed of several CFR PARTs.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">For exmaple, 21 CFR is the title 21 of CFR document.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000027 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000027">
+        <rdfs:label xml:lang="en">Biometrics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+        <obo:IAO_0000115 xml:lang="en">A method of verifying an individual&apos;s identity based on measurement of the individual&apos;s physical feature(s) or repeatable action(s) where those features and/or actions are both unique to that individual and measurable.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000028 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000028">
+        <rdfs:label xml:lang="en">Closed system</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+        <obo:IAO_0000115 xml:lang="en">An environment in which system access is controlled by persons who are responsible for the content of electronic records that are on the system.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000029 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000029">
+        <rdfs:label xml:lang="en">Digital signature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000034"/>
+        <obo:IAO_0000115 xml:lang="en">An electronic signature based upon cryptographic methods of originator authentication, computed by using a set of rules and a set of parameters such that the identity of the signer and the integrity of the data can be verified.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000030 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000030">
+        <rdfs:label xml:lang="en">Electronic record</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+        <obo:IAO_0000115 xml:lang="en">Any combination of text, graphics, data, audio, pictorial, or other information representation in digital form that is created, modified, maintained, archived, retrieved, or distributed by a computer system.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000031 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000031">
+        <rdfs:label xml:lang="en">Electronic signature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000034"/>
+        <obo:IAO_0000115 xml:lang="en">A computer data compilation of any symbol or series of symbols executed, adopted, or authorized by an individual to be the legally binding equivalent of the individual&apos;s handwritten signature.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000032 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000032">
+        <rdfs:label xml:lang="en">Handwritten signature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000034"/>
+        <obo:IAO_0000119 xml:lang="en">21 CFR 11.3</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">The scripted name or legal mark of an individual handwritten by that individual and executed or adopted with the present intention to authenticate a writing in a permanent form. The act of signing with a writing or marking instrument such as a pen or stylus is preserved. The scripted name or legal mark, while conventionally applied to paper, may also be applied to other devices that capture the name or mark.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000033 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000033">
+        <rdfs:label xml:lang="en">Open system</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+        <obo:IAO_0000115 xml:lang="en">An environment in which system access is not controlled by persons who are responsible for the content of electronic records that are on the system.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000034 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000034">
+        <rdfs:label xml:lang="en">signature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000041 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000041">
+        <rdfs:label xml:lang="en">CFR PART</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                        <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000053"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000119"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000021"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+        <obo:IAO_0000115>The part of CFR document that is the direct subsection of a CFR title.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000042 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000042">
+        <rdfs:label xml:lang="en">CFR SUBPART</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                        <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000041"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000119"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000021"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000129"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000126"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A part of CFR document that is the direct subsection of CFR PART, and it is composed of several CFR sections.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000044 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000044">
+        <rdfs:label xml:lang="en">21CFR level 1 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000046"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000046 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000046">
+        <rdfs:label xml:lang="en">CFR level 1 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:comment xml:lang="en">Example: 21 CFR 201.57(c), the (c) will be the 21 CFR 201.57 section&apos;s level 1 subsection paragraph</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">The direct subsection of a CFR section, which is denoted by lower case alphabets with brakets, suh as (a), (b),...</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000047 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000047">
+        <rdfs:label xml:lang="en">CFR paragraph unit</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                        <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000021"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+        <obo:IAO_0000115 xml:lang="en">The direct subsection of a CFR section.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000048 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000048">
+        <rdfs:label xml:lang="en">CFR level 2 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000048"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Example: 21 CFR 201.57(c)(9), the (9) is the level 2 subsection paragraph under the level1 subsection paragraph 201.57(c)</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">The direct subsection of a CFR levle 1 section, which is denoted by arabic numbers with brakets, suh as (1), (2),...</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The level2 subsection has to be given with a level 1 subsection. There is no meaning to give the level 2 subsection without giving higher level subsection, which needs to be implemented in the ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000049 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000049">
+        <rdfs:label xml:lang="en">CFR level 3 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000048"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Example: 21 CFR 201.57(c)(9)(iv), the (iv) will be the 21 CFR 201.57 section&apos;s level 3 subsection graph</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">The direct subsection of a CFR levle 2 section, which is denoted by roman numbers with brakets, suh as (i), (ii),...</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000050 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000050">
+        <rdfs:label xml:lang="en">CFR volumn</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000007"/>
+        <rdfs:comment xml:lang="en">A part of CFR volumn that compose of serval CFR titles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000051 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000051">
+        <rdfs:label xml:lang="en">CFR subtitle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000129"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000126"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Oreg:OREG_0000019 xml:lang="en">1 CFR 21.7 (b) Subtitles may be used to distinguish between materials emanating from an overall agency and the material issued by its various components. Subtitles may also be used to group chapters within a title.</Oreg:OREG_0000019>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000052 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000052">
+        <rdfs:label xml:lang="en">CFR Chapter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                        <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000025"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000129"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000126"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Oreg:OREG_0000019 xml:lang="en">1 CFR 21.8 (a) The normal divisions of a title are chapters, assigned to the various agencies within a title descriptive of the subject matter covered by the agencies’ regulations.</Oreg:OREG_0000019>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000053 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000053">
+        <rdfs:label xml:lang="en">CFR Subchapter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                        <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000052"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000119"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000041"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000129"/>
+                <owl:someValuesFrom rdf:resource="&Oreg;OREG_0000126"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Oreg:OREG_0000019 xml:lang="en">1 CFR 21.8(b) Subchapters may be used to group related parts within a chapter.</Oreg:OREG_0000019>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000054 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000054">
+        <rdfs:label xml:lang="en">CFR level 4 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000049"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Example: 21 CFR 201.57(c)(9)(iv)(A), the (A) will be the 21 CFR 201.57 section&apos;s level 4 subsection paragraph</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">The direct subsection of a CFR section, which is denoted by upper case alphabets with brakets, suh as (A), (B),...</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000055 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000055">
+        <rdfs:label xml:lang="en">CFR level 5 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000054"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">The direct subsection of a CFR levle 4 section, which is denoted by arabic numbers with brakets, suh as (1), (2),...</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000056 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000056">
+        <rdfs:label xml:lang="en">CFR level 6 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000055"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">The direct subsection of a CFR levle 5 section, which is denoted by roman numbers with brakets, suh as (i), (ii),...</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000057 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000057">
+        <rdfs:label xml:lang="en">21 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000043"/>
+                <owl:allValuesFrom rdf:resource="&Oreg;OREG_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000129"/>
+                <owl:hasValue rdf:resource="&Oreg;OREG_0000150"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000058 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000058">
+        <rdfs:label xml:lang="en">1 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000059 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000059">
+        <rdfs:label xml:lang="en">2 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000060 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000060">
+        <rdfs:label xml:lang="en">3 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000061 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000061">
+        <rdfs:label xml:lang="en">4 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000062 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000062">
+        <rdfs:label xml:lang="en">5 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000063 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000063">
+        <rdfs:label xml:lang="en">6 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000064 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000064">
+        <rdfs:label xml:lang="en">7 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000065 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000065">
+        <rdfs:label xml:lang="en">8 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000066 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000066">
+        <rdfs:label xml:lang="en">9 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000067 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000067">
+        <rdfs:label xml:lang="en">10 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000068 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000068">
+        <rdfs:label xml:lang="en">11 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000069 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000069">
+        <rdfs:label xml:lang="en">12 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000070 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000070">
+        <rdfs:label xml:lang="en">13 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000071 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000071">
+        <rdfs:label xml:lang="en">14 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000072 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000072">
+        <rdfs:label xml:lang="en">15 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000073 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000073">
+        <rdfs:label xml:lang="en">16 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000074 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000074">
+        <rdfs:label xml:lang="en">17 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000075 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000075">
+        <rdfs:label xml:lang="en">18 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000076 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000076">
+        <rdfs:label xml:lang="en">19 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000077 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000077">
+        <rdfs:label xml:lang="en">20 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000078 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000078">
+        <rdfs:label xml:lang="en">subject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000079 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000079">
+        <rdfs:label xml:lang="en">22 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000080 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000080">
+        <rdfs:label xml:lang="en">23 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000081 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000081">
+        <rdfs:label xml:lang="en">24 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000082 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000082">
+        <rdfs:label xml:lang="en">25 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000083 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000083">
+        <rdfs:label xml:lang="en">26 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000084 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000084">
+        <rdfs:label xml:lang="en">27 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000085 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000085">
+        <rdfs:label xml:lang="en">28 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000086 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000086">
+        <rdfs:label xml:lang="en">29 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000087 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000087">
+        <rdfs:label xml:lang="en">30 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000088 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000088">
+        <rdfs:label xml:lang="en">31 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000089 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000089">
+        <rdfs:label xml:lang="en">32 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000090 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000090">
+        <rdfs:label xml:lang="en">33 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000091 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000091">
+        <rdfs:label xml:lang="en">34 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000092 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000092">
+        <rdfs:label xml:lang="en">35 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000093 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000093">
+        <rdfs:label xml:lang="en">36 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000094 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000094">
+        <rdfs:label xml:lang="en">37 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000095 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000095">
+        <rdfs:label xml:lang="en">38 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000096 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000096">
+        <rdfs:label xml:lang="en">39 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000097 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000097">
+        <rdfs:label xml:lang="en">40 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000098 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000098">
+        <rdfs:label xml:lang="en">41 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000099 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000099">
+        <rdfs:label xml:lang="en">42 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000100 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000100">
+        <rdfs:label xml:lang="en">43 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000101 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000101">
+        <rdfs:label xml:lang="en">44 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000102 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000102">
+        <rdfs:label xml:lang="en">45 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000103 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000103">
+        <rdfs:label xml:lang="en">46 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000104 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000104">
+        <rdfs:label xml:lang="en">47 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000105 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000105">
+        <rdfs:label xml:lang="en">48 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000106 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000106">
+        <rdfs:label xml:lang="en">49 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000107 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000107">
+        <rdfs:label xml:lang="en">50 CFR</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000108 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000108">
+        <rdfs:label xml:lang="en">key word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000120 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000120">
+        <rdfs:label xml:lang="en">21 CFR Subchapter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000053"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000121 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000121">
+        <rdfs:label xml:lang="en">21 CFR Chapter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000052"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000125 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000125">
+        <rdfs:label xml:lang="en">21 CFR level 2 subsection paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000048"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000126 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000126">
+        <rdfs:label xml:lang="en">heading</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000152 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000152">
+        <rdfs:label xml:lang="en">full paragrph wording</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000162 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000162">
+        <rdfs:label xml:lang="en">CFR paragraph list</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Oreg;OREG_0000007"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000114"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000047"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000164"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000047"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000165"/>
+                        <owl:onClass rdf:resource="&Oreg;OREG_0000047"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Oreg;OREG_0000168"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="&xsd;int">1</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Oreg;OREG_0000007"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000114"/>
+                <owl:onClass rdf:resource="&Oreg;OREG_0000047"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000168"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="&xsd;int">1</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000165"/>
+                <owl:onClass rdf:resource="&Oreg;OREG_0000047"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Oreg;OREG_0000164"/>
+                <owl:onClass rdf:resource="&Oreg;OREG_0000047"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A list that composed of paragraph has start, start_with a paragraph but not a list, has an end, endwith another paragraph but not a list. It is a paragraph aggregate. and has list_length(data value), which gives the total numbers of the memeber paragraphs. The order of the member is related using is_adjacent_after(y,x) means y immediately appear after x, or y is the next paragraph of x. All the members are disjoint to each other.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000169 -->
+
+    <owl:Class rdf:about="&Oreg;OREG_0000169">
+        <rdfs:label xml:lang="en">publication date</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000026 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000026">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Scope</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000110 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000110">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.2</rdfs:label>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000111"/>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000117"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000111 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000111">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Implementation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000113 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000113">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(a)</rdfs:label>
+        <Oreg:OREG_0000154>(a) The regulations in this part set forth the criteria under which the agency considers electronic records, electronic signatures, and handwritten signatures executed to electronic records to be trustworthy, reliable, and generally equivalent to paper records and handwritten signatures executed on paper.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000115 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000115">
+        <rdf:type rdf:resource="&Oreg;OREG_0000023"/>
+        <rdfs:label xml:lang="en">21 CFR Part 11</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000122"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000116 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000116">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1</rdfs:label>
+        <Oreg:OREG_0000168 rdf:datatype="&xsd;int">8</Oreg:OREG_0000168>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000026"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000113"/>
+        <Oreg:OREG_0000164 rdf:resource="&Oreg;OREG_0000113"/>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000117"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000155"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000156"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000157"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000158"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000159"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000160"/>
+        <Oreg:OREG_0000114 rdf:resource="&Oreg;OREG_0000161"/>
+        <Oreg:OREG_0000165 rdf:resource="&Oreg;OREG_0000161"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000117 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000117">
+        <rdf:type rdf:resource="&Oreg;OREG_0000024"/>
+        <rdfs:label xml:lang="en">21 CFR Part 11 Subpart A</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000115"/>
+        <Oreg:OREG_0000129 rdf:resource="&Oreg;OREG_0000130"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000122 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000122">
+        <rdf:type rdf:resource="&Oreg;OREG_0000120"/>
+        <rdfs:label xml:lang="en">21 CFR Subchapter A</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000123"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000123 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000123">
+        <rdf:type rdf:resource="&Oreg;OREG_0000121"/>
+        <rdfs:label xml:lang="en">21 CFR CHAPTER I</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000124"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000124 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000124">
+        <rdf:type rdf:resource="&Oreg;OREG_0000057"/>
+        <rdfs:label xml:lang="en">21 CFR</rdfs:label>
+        <rdfs:comment>instance of 21 CFR class with a release date.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000127 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000127">
+        <rdf:type rdf:resource="&Oreg;OREG_0000024"/>
+        <rdfs:label xml:lang="en">21 CFR Part 11 Subpart C</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000115"/>
+        <Oreg:OREG_0000129 rdf:resource="&Oreg;OREG_0000132"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000128 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000128">
+        <rdf:type rdf:resource="&Oreg;OREG_0000024"/>
+        <rdfs:label xml:lang="en">21 CFR Part 11 Subpart B</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000115"/>
+        <Oreg:OREG_0000129 rdf:resource="&Oreg;OREG_0000131"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000130 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000130">
+        <rdf:type rdf:resource="&Oreg;OREG_0000126"/>
+        <rdfs:label xml:lang="en">Subpart A—General Provisions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000131 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000131">
+        <rdf:type rdf:resource="&Oreg;OREG_0000126"/>
+        <rdfs:label xml:lang="en">Subpart B—Electronic Records</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000132 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000132">
+        <rdf:type rdf:resource="&Oreg;OREG_0000126"/>
+        <rdfs:label xml:lang="en">Subpart C—Electronic Signatures</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000133 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000133">
+        <rdf:type rdf:resource="&Oreg;OREG_0000120"/>
+        <rdfs:label xml:lang="en">21 CFR Subchapter B</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000123"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000134 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000134">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.3</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000117"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000135"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000135 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000135">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Definitions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000136 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000136">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.10</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000128"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000137"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000137 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000137">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Controls for closed systems</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000138 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000138">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.30</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000128"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000139"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000139 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000139">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Controls for open systems</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000140 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000140">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.50</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000128"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000141"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000141 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000141">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Signature manifestations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000142 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000142">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.70</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000128"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000143"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000143 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000143">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Signature/record linking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000144 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000144">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CRF 11.100</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000127"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000145"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000145 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000145">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">General requirements</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000146 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000146">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.200</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000127"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000147"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000147 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000147">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Electronic signature components and controls</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000148 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000148">
+        <rdf:type rdf:resource="&Oreg;OREG_0000020"/>
+        <rdfs:label xml:lang="en">21 CFR 11.300</rdfs:label>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000127"/>
+        <Oreg:OREG_0000109 rdf:resource="&Oreg;OREG_0000149"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000149 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000149">
+        <rdf:type rdf:resource="&Oreg;OREG_0000078"/>
+        <rdfs:label xml:lang="en">Controls for identification codes/passwords</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000150 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000150">
+        <rdf:type rdf:resource="&Oreg;OREG_0000126"/>
+        <rdfs:label xml:lang="en">Title 21—Food and Drugs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000155 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000155">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(b)</rdfs:label>
+        <Oreg:OREG_0000154 xml:lang="en">(b) This part applies to records in electronic form that are created, modified, maintained, archived, retrieved, or transmitted, under any records requirements set forth in agency regulations. This part also applies to electronic records submitted to the agency under requirements of the Federal Food, Drug, and Cosmetic Act and the Public Health Service Act, even if such records are not specifically identified in agency regulations. However, this part does not apply to paper records that are, or have been, transmitted by electronic means.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000166 rdf:resource="&Oreg;OREG_0000113"/>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000156 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000156">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(c)</rdfs:label>
+        <Oreg:OREG_0000154 xml:lang="en">(c) Where electronic signatures and their associated electronic records meet the requirements of this part, the agency will consider the electronic signatures to be equivalent to full handwritten signatures, initials, and other general signings as required by agency regulations, unless specifically excepted by regulation(s) effective on or after August 20, 1997.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+        <Oreg:OREG_0000166 rdf:resource="&Oreg;OREG_0000155"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000157 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000157">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(d)</rdfs:label>
+        <Oreg:OREG_0000154 xml:lang="en">(d) Electronic records that meet the requirements of this part may be used in lieu of paper records, in accordance with § 11.2, unless paper records are specifically required.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+        <Oreg:OREG_0000166 rdf:resource="&Oreg;OREG_0000156"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000158 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000158">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(e)</rdfs:label>
+        <Oreg:OREG_0000154 xml:lang="en">(e) Computer systems (including hardware and software), controls, and attendant documentation maintained under this part shall be readily available for, and subject to, FDA inspection.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+        <Oreg:OREG_0000166 rdf:resource="&Oreg;OREG_0000157"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000159 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000159">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(f)</rdfs:label>
+        <Oreg:OREG_0000154 xml:lang="en">(f) This part does not apply to records required to be established or maintained by §§ 1.326 through 1.368 of this chapter. Records that satisfy the requirements of part 1, subpart J of this chapter, but that also are required under other applicable statutory provisions or regulations, remain subject to this part.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+        <Oreg:OREG_0000166 rdf:resource="&Oreg;OREG_0000158"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000160 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000160">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(g)</rdfs:label>
+        <Oreg:OREG_0000154 xml:lang="en">(g) This part does not apply to electronic signatures obtained under § 101.11(d) of this chapter.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+        <Oreg:OREG_0000166 rdf:resource="&Oreg;OREG_0000159"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg/OREG_0000161 -->
+
+    <owl:NamedIndividual rdf:about="&Oreg;OREG_0000161">
+        <rdf:type rdf:resource="&Oreg;OREG_0000044"/>
+        <rdfs:label xml:lang="en">21 CFR 11.1(h)</rdfs:label>
+        <Oreg:OREG_0000154 xml:lang="en">(h) This part does not apply to electronic signatures obtained under § 101.8(d) of this chapter.</Oreg:OREG_0000154>
+        <Oreg:OREG_0000043 rdf:resource="&Oreg;OREG_0000116"/>
+        <Oreg:OREG_0000166 rdf:resource="&Oreg;OREG_0000160"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Oreg;OREG_0000113"/>
+            <rdf:Description rdf:about="&Oreg;OREG_0000155"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
