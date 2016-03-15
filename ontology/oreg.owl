@@ -21,7 +21,6 @@
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/Oreg">
         <rdfs:comment xml:lang="en">The ontology for regulations and guidance</rdfs:comment>
-        <owl:imports rdf:resource="http://sharepoint.fda.gov/orgs/CDER-OTS/CDER-Ontologies/TAMO/OBI_import.owl"/>
     </owl:Ontology>
     
 
