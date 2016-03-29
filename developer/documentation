@@ -1,0 +1,58 @@
+All the parallel runs are using sge_par.sh developed by Mike.
+
+1. extract the 21CFR XML files into simple csv files:
+   input: 21 CFR XML files
+   output: each section as a csv file stored in output/section/ folder
+   python file (non run-parallel): extract_all_paragraph_specific_section.py
+
+2. clean up the csv files from step 1:
+   input: all csv files in folder: output/section/
+   output: all csv files in folder: output/section/clean
+   python file (run-parallel) :parse_section_csv.py   
+   
+3. Use the clean csv files, tranfer them into text file for RAKE input
+   input: output from step 2
+   output: all text files under folder: output/text_section/RAKE
+   python file (run-parallel): cleanCSV_to_text_single.py
+
+4. RAKE key word extraction:
+   Pre-request for running this step: download the rake_tutorial folder from GitHub site:https://github.com/zelandiya/RAKE-tutorial
+   Has to run the python code under the RAKE-tutorial-master folder
+   input: output from step 3
+   output: all the ".key" files under /output/CFR_keywords_RAKE/
+   python file (run-parallel): bulk_key_word.py
+   
+5. generate a file to contain all the key phrases dictionary: key phrase in its natural form is the key, and the key phrase without space is the value. This step also stem the words
+   input: output from steph 4
+   output: a pickle dumpped dictionary under folder output: output/myKeyPhraseDict.txt
+   python file (run-parallel): key_phrase_dict_single.py
+
+
+6. tranform the 21 CFR text using this dictionary, so all the key phrases will become one word for Gensim LDA topic modeling.
+   input: load the output dictinary file that is the output from step 5. and use the output files from step 3.
+   output: tall the ".txt" file under folder: /output/21CFR_dictionary/
+   python file (run-parallel): dictionary_rebuild_single.py
+   
+7. Linux command: merge the files under 21CFR_dictionary into one file: go under the directory and merge the files.
+   cat * > merged-file.txt 
+   
+8. build the dictionary that will used by Gensim lDA package
+   input: output from step 7.
+   output: a dictionary file under the 21CFR_tmp folder : runs/gensim_tmp/21CFR_2wp_dict.dict
+   python file (non run-parallel):dictionary_rebuild_step2.py
+
+9. Genreate the Gensim_LDA model topic modeling list file
+   input : dictionary from step 8. output file from step 6.
+   output: Gensim topic modeling list under the folder: output/gensim_LDA_out/
+   python file (run-parallel): gensim_LDA_single.py
+   # this step requires recursively rerun the srcipt. Under the parallel environment, some output files can not be generated. Need to discuss with Mike.
+   
+   # 9.1 recursively run the script: requires obtain the result list, compare with the input list, and rerun 
+     Linux command:
+	 [yu.lin@betsy gensim_LDA_out]$ ls | wc -l
+      5961  
+     [yu.lin@betsy gensim_LDA_out]$ ls -1 * > ../gensim_run_6.lst
+     [yu.lin@betsy gensim_LDA_out]$ cd ..
+	 # manipulate the list of filenames so we can compare and generate a diff list
+     [yu.lin@betsy output]$ comm -23 <(sort Copy\ of\ temp_21CFR_dictionary.lst) <(sort gensim_run_6.lst) > diff_gensim_run_6.lst
+     [yu.lin@betsy output]$ sed -e 's/$/.csv2txt.txt.txt/' -i diff_gensim_run_6.lst
