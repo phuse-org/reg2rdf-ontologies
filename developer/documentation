@@ -52,6 +52,7 @@ All the parallel runs are using sge_par.sh developed by Mike.
 
 10.Change the gensim output file to csv file, and sort the result.
    First: one command to delete the "[digit]" at the end of the line.
+   sed -i 's/\[[0-9]\]$//' *
    
    input: output from step 9.
    output: csv files format of the input files.
