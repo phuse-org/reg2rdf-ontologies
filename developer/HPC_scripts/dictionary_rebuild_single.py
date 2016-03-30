@@ -61,7 +61,7 @@ with open(file) as f:
         if not line.startswith('[') and len(line) >1:
              
             for word in line.lower().split():
-                word = re.sub(r"[^A-Za-z]+", '', word) # remove all others, only keep letters
+                word = re.sub(r"[^A-Za-z_]+", '', word) # remove all others, only keep letters, and the "_" for word phrase
                 if (word not in stoplist):
                     if (word.endswith(('ed','ing'))) and (word <> "labeling"):
                         word = wnl.lemmatize(word,'v')
