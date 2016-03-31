@@ -1,5 +1,9 @@
 All the parallel runs are using sge_par.sh developed by Mike.
 
+[working environment:
+Python 2.7.7 installed on [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2 ]
+
+
 1. extract the 21CFR XML files into simple csv files:
    input: 21 CFR XML files
    output: each section as a csv file stored in output/section/ folder
