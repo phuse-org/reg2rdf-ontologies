@@ -70,8 +70,8 @@ Python 2.7.7 installed on [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2 ]
 	     input: titlewordbagfile.txt, 11_201.txt
 	     output: def_word_bag_list.txt (count 4990) title_word_bag_list.txt (count 640)
 	     Python file (non run-parallel): final_keyword_s1.py
-    11.1.1 save the section titles into a dictionary for later use
-	     Python file (non run-parallel) : final_keyword_s1_1.py
+             11.1.1 save the section titles into a dictionary for later use
+	           Python file (non run-parallel) : final_keyword_s1_1.py
 	11.2 put the gensim output file into a list for later use
 	     input: output from step 10
 		 output: gensim_score_dict file in Gensim_score_list/ folder
