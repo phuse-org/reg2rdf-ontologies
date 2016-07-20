@@ -7,19 +7,19 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.fda.gov/ontologies/cder/Oreg.owl">
-        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <dc:title>The Ontology for Regulations</dc:title>
         <dc:contributor xml:lang="en">Mary Banach</dc:contributor>
         <dc:creator xml:lang="en">Asiyah Yu Lin</dc:creator>
         <rdfs:comment xml:lang="en">This ontology is focused on representing 21CFR structure, 21CFR defined concepts for the current stage</rdfs:comment>
         <dc:contributor xml:lang="en">Hon Sum Ko</dc:contributor>
-        <dc:contributor xml:lang="en">Mitra Rocca</dc:contributor>
         <dc:date xml:lang="en">July 19 2016</dc:date>
+        <dc:contributor xml:lang="en">Mitra Rocca</dc:contributor>
         <dc:contributor xml:lang="en">MD Rashdul Hassan</dc:contributor>
     </owl:Ontology>
     
@@ -84,25 +84,120 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000019 -->
 
     <owl:AnnotationProperty rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000019">
         <rdfs:label>CFR definition</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000154 -->
-
-    <owl:AnnotationProperty rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000154">
-        <rdfs:label>CFR paragraph text</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000019 -->
-
-    <owl:AnnotationProperty rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000019">
         <rdfs:label xml:lang="en">CFR definition</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </owl:AnnotationProperty>
@@ -112,6 +207,7 @@
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000154 -->
 
     <owl:AnnotationProperty rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000154">
+        <rdfs:label>CFR paragraph text</rdfs:label>
         <rdfs:label xml:lang="en">CFR paragraph text</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -137,6 +233,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -157,6 +259,12 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#Literal -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -408,9 +516,9 @@
     
 
 
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000170 -->
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000195 -->
 
-    <owl:ObjectProperty rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000170">
+    <owl:ObjectProperty rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000195">
         <rdfs:label xml:lang="en">has_publication_date</rdfs:label>
     </owl:ObjectProperty>
     
@@ -465,177 +573,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000169 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000169">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 868</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000171 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000171">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 870</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000172 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000172">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 862</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000173 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000173">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 872</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000174 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000174">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 874</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000175 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000175">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 876</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000176 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000176">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 880</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000177 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000177">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 864</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000178 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000178">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 866</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000179 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000179">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 866</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000180 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000180">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 882</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000181 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000181">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 884</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000182 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000182">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 886</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000183 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000183">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 888</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000184 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000184">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 864</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000185 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000185">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 890</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000186 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000186">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 892</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000187 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000187">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 878</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.fda.gov/ontologies/cder/OREG_0000188 -->
-
-    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000188">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label>21CFR Part 862</rdfs:label>
-    </owl:Class>
     
 
 
@@ -732,7 +669,6 @@ level 5   (1), (2), (3), etc.
 level 6   (i), (ii), (iii), etc.
 
 [54 FR 9682, Mar. 7, 1989; 54 FR 23343, May 31, 1989]</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000173"/>
         <rdfs:label xml:lang="en">CFR standard organization structural unit</rdfs:label>
     </owl:Class>
     
@@ -1873,7 +1809,16 @@ level 6   (i), (ii), (iii), etc.
 
     <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000169">
         <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
-        <rdfs:label xml:lang="en">medical device related 21 CFR part</rdfs:label>
+        <rdfs:label>21CFR Part 868</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000170 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000170">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 870</rdfs:label>
     </owl:Class>
     
 
@@ -1881,8 +1826,8 @@ level 6   (i), (ii), (iii), etc.
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000171 -->
 
     <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000171">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000041"/>
-        <rdfs:label xml:lang="en">1 CFR Part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 862</rdfs:label>
     </owl:Class>
     
 
@@ -1890,8 +1835,8 @@ level 6   (i), (ii), (iii), etc.
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000172 -->
 
     <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000172">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000021"/>
-        <rdfs:label xml:lang="en">1 CFR section</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 872</rdfs:label>
     </owl:Class>
     
 
@@ -1899,9 +1844,8 @@ level 6   (i), (ii), (iii), etc.
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000173 -->
 
     <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000173">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000172"/>
-        <dc:subject>PREPARATION OF DOCUMENTS SUBJECT TO CODIFICATION</dc:subject>
-        <rdfs:label xml:lang="en">1 CFR 21.11</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 874</rdfs:label>
     </owl:Class>
     
 
@@ -1909,7 +1853,170 @@ level 6   (i), (ii), (iii), etc.
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000174 -->
 
     <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000174">
-        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000171"/>
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 876</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000175 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000175">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000176 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000176">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000177 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000177">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 866</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000178 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000178">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 866</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000179 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000179">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 882</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000180 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000180">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 884</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000181 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000181">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 886</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000182 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000182">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 888</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000183 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000183">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 864</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000184 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000184">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 890</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000185 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000185">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 892</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000186 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000186">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 878</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000187 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000187">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label>21CFR Part 862</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000189 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000189">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <rdfs:comment>Guidance documents represent the FDA&apos;s current thinking on a particular subject. They do not create or confer any rights for or on any person and do not operate to bind FDA or the public. An alternative approach may be used if such approach satisfies the requirements of the applicable statute, regulations, or both. For information on a specific guidance document, please contact the originating office.</rdfs:comment>
+        <rdfs:label xml:lang="en">FDA guidance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000191 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000191">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000023"/>
+        <rdfs:label xml:lang="en">medical device related 21 CFR part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000192 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000192">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000041"/>
+        <rdfs:label xml:lang="en">1 CFR Part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000193 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000193">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000021"/>
+        <rdfs:label xml:lang="en">1 CFR section</rdfs:label>
+        <rdfs:label>21CFR Part 862</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.fda.gov/ontologies/cder/OREG_0000194 -->
+
+    <owl:Class rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000194">
+        <rdfs:subClassOf rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000192"/>
+        <dc:subject>PREPARATION OF DOCUMENTS SUBJECT TO CODIFICATION</dc:subject>
         <rdfs:label xml:lang="en">1 CFR Part 21</rdfs:label>
     </owl:Class>
     
@@ -2355,19 +2462,137 @@ level 6   (i), (ii), (iii), etc.
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000175 -->
 
     <owl:NamedIndividual rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000175">
-        <rdf:type rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000173"/>
         <Oreg:OREG_0000109 rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000176"/>
-        <rdfs:label xml:lang="en">1 CFR 21.11</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.fda.gov/ontologies/cder/OREG_0000176 -->
 
-    <owl:NamedIndividual rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000176">
-        <rdf:type rdf:resource="http://www.fda.gov/ontologies/cder/OREG_0000078"/>
-        <rdfs:label xml:lang="en">PREPARATION OF DOCUMENTS SUBJECT TO CODIFICATION</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000176"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000175">
+        <rdfs:label>21CFR Part 880</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.fda.gov/ontologies/cder/OREG_0000176">
+        <rdfs:label>21CFR Part 864</rdfs:label>
+    </rdf:Description>
     
 
 

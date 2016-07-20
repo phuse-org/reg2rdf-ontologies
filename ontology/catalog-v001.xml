@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/iao.owl" uri="IAO_import.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ontorat_0000001.owl" uri="file:/M:/medical%20device%20ontology/mdo/ontorat%20input/medical_specialty_21CFR_Oreg.owl"/>
-    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-20130430" uri="https://www.w3.org/ns/prov-o"/>
-    <uri id="Imports Wizard Entry" name="http://purl.org/dc/elements/1.1/" uri="http://protege.stanford.edu/plugins/owl/dc/dublincore.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1468952803331" name="http://purl.obolibrary.org/obo/iao.owl" uri="IAO_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1468952803331" name="http://purl.obolibrary.org/obo/ontorat_0000001.owl" uri="ontorat%20input/medical_specialty_21CFR_Oreg.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1468952803331" name="http://www.fda.gov/ontologies/cder/Oreg/" uri="oreg.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1469047023891" name="http://purl.obolibrary.org/obo/iao.owl" uri="IAO_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1469047023891" name="http://purl.obolibrary.org/obo/ontorat_0000001.owl" uri="ontorat%20input/medical_specialty_21CFR_Oreg.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1469047023891" name="http://www.fda.gov/ontologies/cder/Oreg/" uri="oreg.owl"/>
     </group>
 </catalog>
